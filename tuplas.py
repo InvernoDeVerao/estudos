@@ -58,11 +58,20 @@ for pos, valor in enumerate(numeros):
         achou3=True
     if not achou3:
         print('o número 3 não foi digitado')
-print(f"foram digitados {pares} números pares")"""
+print(f"foram digitados {pares} números pares")
 
 produtosPreco = ("Lápis", 1.50, "Borracha", 0.75, "Caderno", 12.00, "Mochila", 150.00)
-print("-" * 40)
-print(f"{'LISTAGEM DE PREÇOS':^40}")
-print("-" * 40)
+print("-" * 38)
+print(f"{'LISTAGEM DE PREÇOS':^38}")
+print("-" * 38)
 for pos in range(0, len(produtosPreco), 2):
     print(f"{produtosPreco[pos]:.<30}R${produtosPreco[pos+1]:>6.2f}")
+print("-" * 38)"""
+
+palavras = ("pessoa", "carro", "casa", "computador", "celular", "livro", "mesa", "cadeira", "janela", "porta")
+
+for p in palavras:
+    print(f"\nNa palavra {p.upper()} temos as vogais: ", end="")
+    for letra in p:
+        if letra in "aeiou" or letra in "AEIOU":
+            print(letra, end=" ")
