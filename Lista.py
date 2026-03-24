@@ -44,10 +44,68 @@ while True:
     if resposta == "N":
         break
 n.sort()
-print(f"Você digitou os números: {n}")"""
+print(f"Você digitou os números: {n}")
 
 n = []
-for i in range(5):
-    n.append(int(input("Digite um número: ")))
-    if n 
 
+for i in range(5):
+    num = int(input("Digite um número: "))
+    
+    inserido = False
+    
+    for pos, val in enumerate(n):
+        if num < val:
+            n.insert(pos, num)
+            inserido = True
+            break
+    
+    if not inserido:
+        n.append(num)
+
+print(n)"""
+
+"""
+num5 = 0
+n = []
+while True:
+    n.append(int(input("Digite um número: ")))
+    resposta = input("Quer continuar? [S/N] ").strip().upper()
+    if resposta in "N":
+        break
+print(f"foram digitados {len(n)} numeros)")
+n.sort(reverse=True)
+print(f"Os números em ordem decrescente são: {n}")
+for i in n:
+    if i == 5:
+        num5 += 1
+print(f"O número 5 foi digitado {num5} vezes.")"""
+"""
+n = []
+while True:
+    n.append(int(input("Digite um número: ")))
+    resposta = input("Quer continuar? [S/N] ").strip().upper()
+    if resposta in "N":
+        break
+impares = [i for i in n if i % 2 != 0]
+pares = [i for i in n if i % 2 == 0]
+
+print(f"Você digitou os números: {n}")
+print(f"Os números pares digitados foram: {pares}")
+print(f"Os números ímpares digitados foram: {impares}")"""
+
+calculo = input("digite uma expressão: ")
+pilha = []
+for simb in calculo:
+    if simb == "(":
+        pilha.append('(')
+    elif simb == ")":
+        if len(pilha) > 0:
+            pilha.pop
+        else:
+            pilha.append(")")
+            break
+
+if len(pilha) == 0:
+    print('expressão valida')
+else:
+    print('expressão invalida')
