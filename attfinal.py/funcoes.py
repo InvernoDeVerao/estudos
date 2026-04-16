@@ -17,7 +17,7 @@ def cabeçalho(msg):
     print(linha())
 
 def menu(lista):
-    cabeçalho(AMARELO + "MENU PRINCIPAL" + RESET)
+    cabeçalho("MENU PRINCIPAL")
     for i, item in enumerate(lista):
         print(f"{VERDE}{i+1}{RESET} - {AZUL}{item}{RESET}")
     print(linha())
